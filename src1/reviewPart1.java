@@ -8,6 +8,7 @@ public class reviewPart1
 
         double score = 0;
 
+
         if (score >= 60)
         {
             System.out.println("D");
