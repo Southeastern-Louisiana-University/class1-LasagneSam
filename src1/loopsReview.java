@@ -30,6 +30,34 @@ public class loopsReview
                 gradeCount++;
                 gradeAverage = totalGrade / gradeCount;
                 System.out.print("for " + gradeCount + " grades, grade average is now " + gradeAverage + ", which comes to a letter grade of ");
+                if (gradeAverage > 110)
+                {
+                    System.out.print("S");
+                }
+                else if (gradeAverage >= 90)
+                {
+                    System.out.print("A");
+                }
+                else if (gradeAverage >= 80)
+                {
+                    System.out.print("B");
+                }
+                else if (gradeAverage >= 70)
+                {
+                    System.out.print("C");
+                }
+                else if (gradeAverage >= 60)
+                {
+                    System.out.print("D");
+                }
+                else if (gradeAverage >= 0)
+                {
+                    System.out.print("F");
+                }
+                else
+                {
+                    System.out.print("X");
+                }
                 System.out.println();
 
             }
