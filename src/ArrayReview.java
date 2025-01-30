@@ -56,6 +56,7 @@ public class ArrayReview
     public static double sumArray(double[] doubleArray)
     {
 
+
         double sum = 0;
 
         for (int it = 0; it < doubleArray.length; it++)
