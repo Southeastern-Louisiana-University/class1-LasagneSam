@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CarTest
 {
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
 
         Scanner userIn = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class CarTest
         car1.colour = "Toyota";               // test changing public data field
         System.out.println("car1 colour: " + car1.colour);
 
-        car1.SetModel("Ford");   // test using a method to change a private data field
+        car1.SetModel("Ford");      // test using a method to change a private data field
         System.out.println("car1 model: " + Car.getModel(car1));
 
         car1.Drive(15);            // test using a method to change a public data field

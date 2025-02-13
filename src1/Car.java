@@ -4,17 +4,16 @@ import java.util.Scanner;
 public class Car
 {
 
-    private final String make;           // private because this will not change
-    private String model;          // private because this will not change
-    private final int year;              // private because this will not change
-    private final String vin;            // private because this will not change
-    double mileage;                // this will change as the car is driven
-
-    boolean isNew;                 // this will change as soon as the car is sold from a dealership for the first time
+    private final String make;     // private and final because this will not change
+    private final String vin;      // private and final because this will not change
+    private final int year;        // private and final because this will not change
+    private String model;          // private because this will not change, but not final because it is easy to screw up
     String colour;                 // this may change if the owner gives the car a new paint job
     String ownerRegistered;        // this may change if the car is sold
     String stateRegistered;        // this may change if the car is sold or the owner moves to a different state
+    double mileage;                // this will change as the car is driven
     double lastSalePrice;          // this may change if the car is sold
+    boolean isNew;                 // this will change as soon as the car is sold from a dealership for the first time
 
     public Car(String makeArg, String modelArg, int yearArg, String stateArg, String vinArg)     // these are the bare minimum fields for, say,
     {                                                                                            // a dealership to fill out about a brand-new car
@@ -43,19 +42,22 @@ public class Car
         this.vin = vinArg;
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
 
         Scanner userIn = new Scanner(System.in);
-        // System.out.print("What would you like to do?");
-        Car car1 = new Car("Toyota", "Toyota", 199, "Toyota", "Toyota");
-        car1.colour = "Toyota";
-        car1.model = "Ford";
-        System.out.println("car1 colour: " + car1.colour);
-        System.out.println("car1 model: " + car1.model);
-        car1.Drive(15);
-        System.out.println("car1 miles: " + car1.mileage);
 
+        Car carSamuel = new Car("Jeep","Liberty",2012,230000,
+                               false, "maroon","Samuel Josiah Dedon","Louisiana",
+                                1000,"jgfdbsgbfhgfmndgsdfh");
+
+        toString(carSamuel);
+
+    }
+
+    public static void toString(Car userCar)   // we want to provide the user with a readout of the values of the instance of Car
+    {
+        System.out.println("Make: " + userCar.make);
     }
 
     public void Drive(double milesDriven)
