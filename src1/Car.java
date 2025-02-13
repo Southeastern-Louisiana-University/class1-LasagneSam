@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Car
 {
 
-    private String make;           // private because this will not change
+    private final String make;           // private because this will not change
     private String model;          // private because this will not change
-    private int year;              // private because this will not change
-    private String vin;            // private because this will not change
+    private final int year;              // private because this will not change
+    private final String vin;            // private because this will not change
     double mileage;                // this will change as the car is driven
 
     boolean isNew;                 // this will change as soon as the car is sold from a dealership for the first time
@@ -47,7 +47,14 @@ public class Car
     {
 
         Scanner userIn = new Scanner(System.in);
-        System.out.print("What would you like to do?");
+        // System.out.print("What would you like to do?");
+        Car car1 = new Car("Toyota", "Toyota", 199, "Toyota", "Toyota");
+        car1.colour = "Toyota";
+        car1.model = "Ford";
+        System.out.println("car1 colour: " + car1.colour);
+        System.out.println("car1 model: " + car1.model);
+        car1.Drive(15);
+        System.out.println("car1 miles: " + car1.mileage);
 
     }
 
@@ -73,6 +80,31 @@ public class Car
     public void Paint(String newColour)
     {
         this.colour = newColour;
+    }
+
+    public void SetModel(String newModel)
+    {
+        this.model = newModel;
+    }
+
+    public static String getMake(Car userCar)
+    {
+        return userCar.make;
+    }
+
+    public static String getModel(Car userCar)
+    {
+        return userCar.model;
+    }
+
+    public static int getYear(Car userCar)
+    {
+        return userCar.year;
+    }
+
+    public static String getVIN(Car userCar)
+    {
+        return userCar.vin;
     }
 
 }
