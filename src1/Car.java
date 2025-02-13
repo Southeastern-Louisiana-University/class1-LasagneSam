@@ -51,13 +51,15 @@ public class Car
                                false, "maroon","Samuel Josiah Dedon","Louisiana",
                                 1000,"jgfdbsgbfhgfmndgsdfh");
 
-        toString(carSamuel);
+        System.out.print(toString(carSamuel));
 
     }
 
-    public static void toString(Car userCar)   // we want to provide the user with a readout of the values of the instance of Car
+    public static String toString(Car userCar)   // we want to provide the user with a readout of the values of the instance of Car
+                                                // single string printout of all data fields
     {
-        System.out.println("Make: " + userCar.make);
+        //System.out.println("Make: " + userCar.make);
+        return "yes";
     }
 
     public void Drive(double milesDriven)
