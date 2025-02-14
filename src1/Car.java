@@ -24,6 +24,8 @@ public class Car
         this.isNew = true;        // default value
         this.stateRegistered = stateArg;
         this.vin = vinArg;
+        this.ownerRegistered = "???";
+        this.colour = "???";
     }
 
     public Car(String makeArg, String modelArg, int yearArg, int mileageArg, boolean isNewArg,    // for a user entering a car they
@@ -55,11 +57,11 @@ public class Car
 
     }
 
-    public static String toString(Car userCar)   // we want to provide the user with a readout of the values of the instance of Car
-                                                // single string printout of all data fields
+    public static String toString(Car userCar)
     {
-        //System.out.println("Make: " + userCar.make);
-        return "yes";
+        return "Make: " + userCar.make + "\nModel: " + userCar.model + "\nYear: " + userCar.year + "\nMileage: " + userCar.mileage +
+                "\nIs it new? " + userCar.isNew + "\nColour: " + userCar.colour + "\nRegistered to: " + userCar.ownerRegistered
+                + "\nRegistered in: " + userCar.stateRegistered + "\nLast sale price: " + userCar.lastSalePrice + "\nVIN: " + userCar.vin;
     }
 
     public void Drive(double milesDriven)

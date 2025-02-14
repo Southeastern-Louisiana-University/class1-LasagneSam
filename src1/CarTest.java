@@ -12,14 +12,13 @@ public class CarTest
 
         Car car1 = new Car("Toyota", "Toyota", 1946, "Toyota", "Toyota");
 
-        car1.colour = "Toyota";               // test changing public data field
-        System.out.println("car1 colour: " + car1.colour);
+        //car1.colour = "Toyota";               // test changing public data field
 
         car1.SetModel("Ford");      // test using a method to change a private data field
-        System.out.println("car1 model: " + Car.getModel(car1));
 
         car1.Drive(15);            // test using a method to change a public data field
-        System.out.println("car1 miles: " + car1.mileage);
+
+        System.out.print(Car.toString(car1));
 
     }
 
